@@ -21,3 +21,5 @@ class Task {
         this.completedAt = new Date();
     }
 }
+
+export { Task }
