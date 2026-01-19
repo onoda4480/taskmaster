@@ -1,3 +1,3 @@
-import { TaskComplete} from "./task_complete"
-import { TaskId } from "./task_id"
-import { TaskTitle } from "./task_title"
+import { Status} from "./status.ts"
+import { TaskId } from "./task_id.ts"
+import { TaskTitle } from "./task_title.ts"
