@@ -1,6 +1,4 @@
-import { Status } from "../value-objects/status.ts";
-import { TaskId } from "../value-objects/task_id.ts"
-import { TaskTitle } from "../value-objects/task_title.ts"
+import { Status, TaskId, TaskTitle } from "../value-objects/index.ts"
 
 class Task {
     private constructor(
