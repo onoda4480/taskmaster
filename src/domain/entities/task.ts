@@ -1,0 +1,25 @@
+import { Status } from "../value-objects/status.ts";
+import { TaskId } from "../value-objects/task_id.ts"
+import { TaskTitle } from "../value-objects/task_title.ts"
+
+class Task {
+    private constructor(
+    private readonly id: TaskId,
+    private readonly title: TaskTitle,
+    private status: Status,
+    public readonly createdAt: Date,
+    private completedAt?: Date
+    ){}
+
+    static create(id: TaskId, title: TaskTitle, status: Status): Task {
+        return new Task(id,title,status,new Date())
+    }
+    
+    completed(): void {
+        if (this.status.isCompleted()){
+            throw new Error('すでに完了済みです')
+        }
+        this.status = Status.completed();
+        this.completedAt = new Date();
+    }
+}
