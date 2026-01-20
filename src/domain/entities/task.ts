@@ -20,6 +20,9 @@ class Task {
         this.status = Status.completed();
         this.completedAt = new Date();
     }
+    getId(): TaskId {
+        return this.id;
+    }
 }
 
 export { Task }
