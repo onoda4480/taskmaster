@@ -1,3 +1,3 @@
-import type { TaskRepository } from "./TaskRepository.ts"
+import type { TaskRepository } from "./taskrepository.ts"
 
 export type {TaskRepository}
