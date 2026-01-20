@@ -16,5 +16,9 @@ class Status {
     isCompleted(): boolean {
         return this.status === 'completed';
     }
+
+    getValue(): 'pending' | 'completed' {
+        return this.status;
+    }
 }
 export { Status };

@@ -23,6 +23,24 @@ class Task {
     getId(): TaskId {
         return this.id;
     }
-}
 
-export { Task }
+    toJSON() {
+        return {
+            id: this.id.getValue(),
+            title: this.title.getValue(),
+            status: this.status.getValue(),
+            createdAt: this.createdAt.toISOString(),
+            completedAt: this.completedAt?.toISOString()
+        };
+    }
+
+    static fromJSON(data: any): Task {
+        return new Task(
+            TaskId.create(data.id),
+            TaskTitle.create(data.title),
+            data.status === 'completed' ? Status.completed() : Status.pending(),
+            new Date(data.createdAt),
+            data.completedAt ? new Date(data.completedAt) : undefined
+        );
+    }
+}
