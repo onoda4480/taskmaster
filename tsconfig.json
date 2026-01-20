@@ -10,11 +10,8 @@
     "module": "nodenext",
     "target": "esnext",
     "allowImportingTsExtensions": true,
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    "lib": ["esnext"],
+    "types": ["node"],
 
     // Other Outputs
     "noEmit": true,

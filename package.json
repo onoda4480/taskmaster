@@ -13,12 +13,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/onoda4480/taskmaster/issues"
   },
   "homepage": "https://github.com/onoda4480/taskmaster#readme",
-  "type": "module",
   "devDependencies": {
     "@types/node": "^25.0.9",
     "ts-node": "^10.9.2",
