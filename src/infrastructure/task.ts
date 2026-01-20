@@ -1,6 +1,6 @@
-import type { TaskRepository } from "../../domain/repositories/index.ts"
-import { Task } from "../../domain/entities/task.ts";
-import { TaskId } from "../../domain/value-objects/task_id.ts";
+import type { TaskRepository } from "../domain/repositories/index.ts"
+import { Task } from "../domain/entities/task.ts";
+import { TaskId } from "../domain/value-objects/task_id.ts";
 import { promises as fs } from 'fs';
 
 class FileTaskRepository implements TaskRepository {
