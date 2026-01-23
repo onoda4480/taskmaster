@@ -6,5 +6,6 @@ interface TaskRepository {
     findById(id: TaskId): Promise<Task | null>;
     findAll(): Promise<Task[]>;
     update(task: Task): Promise<void>;
+    nextId(): Promise<TaskId>;
 }
 export type { TaskRepository }

@@ -53,4 +53,12 @@ export class FileTaskRepository implements TaskRepository {
         }
         await fs.writeFile(this.path, JSON.stringify(tasks, null, 2));
     }
+    
+    async nextId(): Promise<TaskId> {
+        const tasks = await this.findAll();
+        const maxId = tasks.length > 0 
+            ? Math.max(...tasks.map(t => t.getId().getValue())) 
+            : 0;
+        return TaskId.create(maxId + 1);
+    }
 }
