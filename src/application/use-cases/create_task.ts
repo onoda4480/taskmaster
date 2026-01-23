@@ -1,7 +1,5 @@
 import type { TaskRepository } from "../../domain/repositories/index.ts"
 import { Task } from "../../domain/entities/task.ts"
-import { FileTaskRepository } from "../../infrastructure/task.ts"
-import { TaskId } from "../../domain/value-objects/task_id.ts";
 import { TaskTitle } from "../../domain/value-objects/task_title.ts";
 import { Status } from "../../domain/value-objects/status.ts";
 
