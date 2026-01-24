@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/onoda4480/taskmaster#readme",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.0.9",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
